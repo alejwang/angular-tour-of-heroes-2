@@ -1,5 +1,5 @@
 <h2>My Heroes</h2>
-<button type="button" name="button" (click)="oby = (oby==='name') ? 'id' : 'name'">Sort</button>
+<button type="button" name="button" (click)="oby = (oby==='name') ? 'id' : 'name'">Sort by {{(oby==='name') ? 'id' : 'name'}}</button>
 <ul class="heroes">
   <li *ngFor="let hero of heroes | orderBy : [oby]"
     [class.selected]="hero === selectedHero"
